@@ -1,0 +1,132 @@
+{
+  "version": "3.0.0",
+  "visualisation": {
+    "nodes": [
+      { "id": "n:Component", "position": { "x": -200, "y": 0 } },
+      { "id": "n:Parameter", "position": { "x": 0, "y": -150 } },
+      { "id": "n:Equation", "position": { "x": 200, "y": 0 } },
+      { "id": "n:BoundaryCondition", "position": { "x": 0, "y": 150 } },
+      { "id": "n:Station", "position": { "x": -150, "y": -150 } }
+    ],
+    "relationships": [
+      { "id": "r:REFER_EDGE", "fromId": "n:Component", "toId": "n:Parameter" },
+      { "id": "r:CROSS_EDGE", "fromId": "n:Parameter", "toId": "n:Equation" }
+    ]
+  },
+  "graphModel": {
+    "relTypes": [ "DYNAMIC_REL" ],
+    "nodes": {
+      "n:Component": { "id": "n:Component", "label": "Component", "properties": { "name": "string" }, "keyAttributes": [ "name" ] },
+      "n:Parameter": { "id": "n:Parameter", "label": "Parameter", "properties": { "name": "string" }, "keyAttributes": [ "name" ] },
+      "n:Equation": { "id": "n:Equation", "label": "Equation", "properties": { "name": "string" }, "keyAttributes": [ "name" ] },
+      "n:BoundaryCondition": { "id": "n:BoundaryCondition", "label": "BoundaryCondition", "properties": { "name": "string" }, "keyAttributes": [ "name" ] },
+      "n:Station": { "id": "n:Station", "label": "Station", "properties": { "name": "string" }, "keyAttributes": [ "name" ] }
+    },
+    "relationships": {
+      "r:REFER_EDGE": { "id": "r:REFER_EDGE", "type": "DYNAMIC_REL", "fromId": "n:Component", "toId": "n:Parameter", "properties": { "知识分类": "string", "页码": "string", "核心释义": "string" } },
+      "r:CROSS_EDGE": { "id": "r:CROSS_EDGE", "type": "DYNAMIC_REL", "fromId": "n:Parameter", "toId": "n:Equation", "properties": { "影响趋势": "string", "跨章节逻辑说明": "string", "核心释义": "string" } }
+    }
+  },
+  "mappingModel": {
+    "pages": [
+      {
+        "id": "p:0",
+        "name": "航发图谱重构拓扑",
+        "mappings": [
+          {
+            "node": { "$ref": "#n:Component" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "源节点名称", "property": { "$ref": "#n:Component.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "源节点标签", "operator": "EQUAL", "value": "Component" }
+          },
+          {
+            "node": { "$ref": "#n:Component" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "目标节点名称", "property": { "$ref": "#n:Component.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "目标节点标签", "operator": "EQUAL", "value": "Component" }
+          },
+          {
+            "node": { "$ref": "#n:Parameter" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "源节点名称", "property": { "$ref": "#n:Parameter.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "源节点标签", "operator": "EQUAL", "value": "Parameter" }
+          },
+          {
+            "node": { "$ref": "#n:Parameter" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "目标节点名称", "property": { "$ref": "#n:Parameter.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "目标节点标签", "operator": "EQUAL", "value": "Parameter" }
+          },
+          {
+            "node": { "$ref": "#n:Equation" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "源节点名称", "property": { "$ref": "#n:Equation.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "源节点标签", "operator": "EQUAL", "value": "Equation" }
+          },
+          {
+            "node": { "$ref": "#n:Equation" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "目标节点名称", "property": { "$ref": "#n:Equation.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "目标节点标签", "operator": "EQUAL", "value": "Equation" }
+          },
+          {
+            "node": { "$ref": "#n:BoundaryCondition" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "源节点名称", "property": { "$ref": "#n:BoundaryCondition.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "源节点标签", "operator": "EQUAL", "value": "BoundaryCondition" }
+          },
+          {
+            "node": { "$ref": "#n:BoundaryCondition" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "目标节点名称", "property": { "$ref": "#n:BoundaryCondition.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "目标节点标签", "operator": "EQUAL", "value": "BoundaryCondition" }
+          },
+          {
+            "node": { "$ref": "#n:Station" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "源节点名称", "property": { "$ref": "#n:Station.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "源节点标签", "operator": "EQUAL", "value": "Station" }
+          },
+          {
+            "node": { "$ref": "#n:Station" }, "tableName": "refer_restructured.csv",
+            "propertyMappings": [ { "fieldName": "目标节点名称", "property": { "$ref": "#n:Station.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "目标节点标签", "operator": "EQUAL", "value": "Station" }
+          },
+          {
+            "node": { "$ref": "#n:Component" }, "tableName": "cross_restructured.csv",
+            "propertyMappings": [ { "fieldName": "源节点", "property": { "$ref": "#n:Component.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "源标签", "operator": "EQUAL", "value": "Component" }
+          },
+          {
+            "node": { "$ref": "#n:Component" }, "tableName": "cross_restructured.csv",
+            "propertyMappings": [ { "fieldName": "目标节点", "property": { "$ref": "#n:Component.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "目标标签", "operator": "EQUAL", "value": "Component" }
+          },
+          {
+            "node": { "$ref": "#n:Parameter" }, "tableName": "cross_restructured.csv",
+            "propertyMappings": [ { "fieldName": "源节点", "property": { "$ref": "#n:Parameter.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "源标签", "operator": "EQUAL", "value": "Parameter" }
+          },
+          {
+            "node": { "$ref": "#n:Parameter" }, "tableName": "cross_restructured.csv",
+            "propertyMappings": [ { "fieldName": "目标节点", "property": { "$ref": "#n:Parameter.properties.name" } } ],
+            "conjunction": "AND", "condition": { "fieldName": "目标标签", "operator": "EQUAL", "value": "Parameter" }
+          },
+          {
+            "relationship": { "$ref": "#r:REFER_EDGE" }, "tableName": "refer_restructured.csv",
+            "type": { "type": "FROM_COLUMN", "columnName": "关系类型" },
+            "sourceMapping": { "node": { "$ref": "#n:Component" }, "conjunction": "AND", "condition": { "fieldName": "源节点标签", "operator": "EQUAL", "value": "Component" } },
+            "targetMapping": { "node": { "$ref": "#n:Parameter" }, "conjunction": "AND", "condition": { "fieldName": "目标节点标签", "operator": "EQUAL", "value": "Parameter" } },
+            "propertyMappings": [
+              { "fieldName": "知识分类", "property": { "$ref": "#r:REFER_EDGE.properties.知识分类" } },
+              { "fieldName": "页码", "property": { "$ref": "#r:REFER_EDGE.properties.页码" } },
+              { "fieldName": "核心释义", "property": { "$ref": "#r:REFER_EDGE.properties.核心释义" } }
+            ]
+          },
+          {
+            "relationship": { "$ref": "#r:CROSS_EDGE" }, "tableName": "cross_restructured.csv",
+            "type": { "type": "FROM_COLUMN", "columnName": "关系类型" },
+            "sourceMapping": { "node": { "$ref": "#n:Parameter" }, "conjunction": "AND", "condition": { "fieldName": "源标签", "operator": "EQUAL", "value": "Parameter" } },
+            "targetMapping": { "node": { "$ref": "#n:Equation" }, "conjunction": "AND", "condition": { "fieldName": "目标标签", "operator": "EQUAL", "value": "Equation" } },
+            "propertyMappings": [
+              { "fieldName": "影响趋势", "property": { "$ref": "#r:CROSS_EDGE.properties.影响趋势" } },
+              { "fieldName": "跨章节逻辑说明", "property": { "$ref": "#r:CROSS_EDGE.properties.跨章节逻辑说明" } },
+              { "fieldName": "核心释义", "property": { "$ref": "#r:CROSS_EDGE.properties.核心释义" } }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

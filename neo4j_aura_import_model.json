@@ -1,0 +1,3279 @@
+{
+  "version": "1",
+  "sources": [
+    {
+      "type": "file",
+      "urls": [
+        "refer_restructured_mod.csv"
+      ],
+      "format": "csv",
+      "header": true
+    },
+    {
+      "type": "file",
+      "urls": [
+        "cross_restructured_mod.csv"
+      ],
+      "format": "csv",
+      "header": true
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "Component"
+        ],
+        "id": {
+          "column": "源节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源节点标签",
+          "value": "Component"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "Parameter"
+        ],
+        "id": {
+          "column": "源节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源节点标签",
+          "value": "Parameter"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "Equation"
+        ],
+        "id": {
+          "column": "源节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源节点标签",
+          "value": "Equation"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "BoundaryCondition"
+        ],
+        "id": {
+          "column": "源节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源节点标签",
+          "value": "BoundaryCondition"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "Station"
+        ],
+        "id": {
+          "column": "源节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源节点标签",
+          "value": "Station"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "Component"
+        ],
+        "id": {
+          "column": "目标节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标节点标签",
+          "value": "Component"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "Parameter"
+        ],
+        "id": {
+          "column": "目标节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标节点标签",
+          "value": "Parameter"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "Equation"
+        ],
+        "id": {
+          "column": "目标节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标节点标签",
+          "value": "Equation"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "labels": [
+          "BoundaryCondition"
+        ],
+        "id": {
+          "column": "目标节点名称",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点名称",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标节点标签",
+          "value": "BoundaryCondition"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "Component"
+        ],
+        "id": {
+          "column": "源节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源标签",
+          "value": "Component"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "Parameter"
+        ],
+        "id": {
+          "column": "源节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源标签",
+          "value": "Parameter"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "Equation"
+        ],
+        "id": {
+          "column": "源节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源标签",
+          "value": "Equation"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "BoundaryCondition"
+        ],
+        "id": {
+          "column": "源节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "源节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "源标签",
+          "value": "BoundaryCondition"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "Component"
+        ],
+        "id": {
+          "column": "目标节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标标签",
+          "value": "Component"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "Parameter"
+        ],
+        "id": {
+          "column": "目标节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标标签",
+          "value": "Parameter"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "Equation"
+        ],
+        "id": {
+          "column": "目标节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标标签",
+          "value": "Equation"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "labels": [
+          "BoundaryCondition"
+        ],
+        "id": {
+          "column": "目标节点",
+          "name": "name"
+        },
+        "properties": [
+          {
+            "column": "目标节点",
+            "name": "name"
+          }
+        ],
+        "filter": {
+          "column": "目标标签",
+          "value": "BoundaryCondition"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "PRODUCES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "PRODUCES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CLASSIFIED_TO",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CLASSIFIED_TO"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "UTILIZES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "UTILIZES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CARRIES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CARRIES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "SYNONYMOUS_WITH",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "SYNONYMOUS_WITH"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "INCLUDES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "INCLUDES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "IS_CORE_OF",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "IS_CORE_OF"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CONSISTS_OF",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CONSISTS_OF"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DRIVES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DRIVES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "ADDS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "ADDS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DELIVERS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DELIVERS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "HAS_NO",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "HAS_NO"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OPERATES_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OPERATES_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DEFINED_AS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DEFINED_AS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CALCULATED_FROM",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CALCULATED_FROM"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "SUBSTRACTS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "SUBSTRACTS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "IS_CAUSED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "IS_CAUSED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "INDICATES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "INDICATES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "MEASURES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "MEASURES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "PRODUCT_OF",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "PRODUCT_OF"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "ASSOCIATED_WITH",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "ASSOCIATED_WITH"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "EXPRESSES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "EXPRESSES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OBEYS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OBEYS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "HAS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "HAS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CALCULATED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CALCULATED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "INCREASES_DUE_TO",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "INCREASES_DUE_TO"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DESCRIBES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DESCRIBES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DECELERATES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DECELERATES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "ACCELERATES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "ACCELERATES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "IS_MINIMUM_AREA_OF",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "IS_MINIMUM_AREA_OF"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OCCURS_AT",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OCCURS_AT"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "IS_A",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "IS_A"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CHANGES_FLOW_FROM",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CHANGES_FLOW_FROM"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "INCREASES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "INCREASES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DECREASES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DECREASES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CONSERVES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CONSERVES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "REFERS_TO",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "REFERS_TO"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DRIVES_MACH_NUMBER_TOWARD",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DRIVES_MACH_NUMBER_TOWARD"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OCCURS_DUE_TO",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OCCURS_DUE_TO"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OCCURS_WHEN",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OCCURS_WHEN"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OCCURS_IN",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OCCURS_IN"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OCCUR_OUTSIDE",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OCCUR_OUTSIDE"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "USES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "USES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CONTAINS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CONTAINS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "BURNS_ALONG",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "BURNS_ALONG"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "RELATES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "RELATES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DROPS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DROPS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OBJECTIVE",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OBJECTIVE"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "STANDARDIZED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "STANDARDIZED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "ASSUMES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "ASSUMES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "NEGLECTS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "NEGLECTS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "HAS_ZERO_THRUST_AT",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "HAS_ZERO_THRUST_AT"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "MAXIMIZED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "MAXIMIZED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "SPLITS_FLOW_INTO",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "SPLITS_FLOW_INTO"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "HAS_LOWER_TSFC_THAN",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "HAS_LOWER_TSFC_THAN"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "MINIMIZED",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "MINIMIZED"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "REQUIRES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "REQUIRES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "QUANTIFIED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "QUANTIFIED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CHARACTERIZED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CHARACTERIZED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DEPENDS_ON",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DEPENDS_ON"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DECREASES_WITH",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DECREASES_WITH"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "INCREASES_WITH",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "INCREASES_WITH"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CAUSED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CAUSED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "REDUCES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "REDUCES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "ACCOUNTS_FOR",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "ACCOUNTS_FOR"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DIFFERS_FROM",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DIFFERS_FROM"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "YIELDS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "YIELDS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "LIES_BETWEEN",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "LIES_BETWEEN"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "ROUTES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "ROUTES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "RECOVERS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "RECOVERS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CREATES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CREATES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "LIMITS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "LIMITS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "ENABLES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "ENABLES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "AFFECTED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "AFFECTED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CALCULATES_THRUST_FROM",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CALCULATES_THRUST_FROM"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "REDUCED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "REDUCED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CONSTRAINED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CONSTRAINED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CAUSES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CAUSES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "HAS_TWO_STREAMS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "HAS_TWO_STREAMS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "SHIFTS_WITH",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "SHIFTS_WITH"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "MAXIMIZES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "MAXIMIZES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "OPTIMIZED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "OPTIMIZED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "CONSTRAINS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CONSTRAINS"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "FIXES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "FIXES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DETERMINED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DETERMINED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DETERMINES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DETERMINES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "REGULATES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "REGULATES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "DEFINES",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DEFINES"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "LIMITED_BY",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "LIMITED_BY"
+        }
+      },
+      {
+        "source": "refer_restructured_mod.csv",
+        "type": "PLOTS",
+        "startNode": {
+          "column": "源节点名称"
+        },
+        "endNode": {
+          "column": "目标节点名称"
+        },
+        "properties": [
+          {
+            "column": "知识分类",
+            "name": "知识分类"
+          },
+          {
+            "column": "页码",
+            "name": "页码"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "PLOTS"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "MODIFIED_BY",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "MODIFIED_BY"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "EVOLVES_INTO",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "EVOLVES_INTO"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "DETERMINES_OFF_DESIGN",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "DETERMINES_OFF_DESIGN"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "CONSTRAIN",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CONSTRAIN"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "APPLIED_TO",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "APPLIED_TO"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "CAUSES_LOSS_IN",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CAUSES_LOSS_IN"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "LIMITS",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "LIMITS"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "IMPOSES",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "IMPOSES"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "EXPANDED_BY",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "EXPANDED_BY"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "COUPLED_WITH",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "COUPLED_WITH"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "CAUSES_SHIFT_IN",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "CAUSES_SHIFT_IN"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "USED_TO_PREDICT",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "USED_TO_PREDICT"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "TRIGGERS",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "TRIGGERS"
+        }
+      },
+      {
+        "source": "cross_restructured_mod.csv",
+        "type": "INCREASES",
+        "startNode": {
+          "column": "源节点"
+        },
+        "endNode": {
+          "column": "目标节点"
+        },
+        "properties": [
+          {
+            "column": "影响趋势",
+            "name": "影响趋势"
+          },
+          {
+            "column": "跨章节逻辑说明",
+            "name": "跨章节逻辑说明"
+          },
+          {
+            "column": "核心释义",
+            "name": "核心释义"
+          }
+        ],
+        "filter": {
+          "column": "关系类型",
+          "value": "INCREASES"
+        }
+      }
+    ]
+  }
+}
