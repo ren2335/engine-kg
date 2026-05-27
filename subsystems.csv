@@ -1,0 +1,7 @@
+﻿subsystem,parent
+Compression,Core Engine
+Combustion,Core Engine
+Expansion,Core Engine
+Exhaust,Core Engine
+Cycle,Core Engine
+General,Core Engine

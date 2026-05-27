@@ -1,0 +1,339 @@
+﻿id,name,category,subsystem,physics_domain,knowledge_domain,network_level,importance,description
+1,Propulsion system,Component,General,GeneralPhysics,系统原理,1,1.0,A propulsion system is a machine that produces thrust to move an object forward.
+2,Airbreathing engine,Component,General,GeneralPhysics,工作原理,1,1.0,An airbreathing engine utilizes the oxygen in the atmospheric air to burn the fuel carried within the vehicle.
+3,Non-airbreathing engine,Component,General,GeneralPhysics,工作原理,1,1.0,A non-airbreathing engine carries both the fuel and the oxidizer required for combustion.
+4,Gas generator,Parameter,General,GeneralPhysics,部件关系,2,0.8,The core of any gas turbine engine is the gas generator.
+5,Turbine,Component,Expansion,GeneralPhysics,部件关系,1,1.0,The turbine extracts energy from the hot gas to drive the compressor.
+6,Turbojet engine,Component,General,GeneralPhysics,结构组成,1,1.0,A turbojet engine is formed by adding an inlet and an exhaust nozzle to the gas generator.
+7,Turbofan engine,Component,General,GeneralPhysics,结构组成,1,1.0,A turbofan engine adds a fan driven by an additional turbine stage or a separate spool.
+8,Turboprop engine,Component,General,GeneralPhysics,结构组成,1,1.0,A turboprop engine uses a gas turbine core to drive a propeller through a reduction gearbox.
+9,Turboshaft engine,Component,General,GeneralPhysics,输出特性,1,1.0,"A turboshaft engine delivers power to a shaft to drive something other than a propeller, such as a helicopter rotor."
+10,Ramjet engine,Component,General,GeneralPhysics,结构特性,1,1.0,The ramjet engine has no moving parts (no compressor or turbine) and relies on forward speed to compress air.
+11,Pulsejet engine,Component,General,GeneralPhysics,工作原理,1,1.0,A pulsejet engine operates with periodic or intermittent combustion using valves or acoustic geometry.
+12,Uninstalled thrust,BoundaryCondition,General,GeneralPhysics,性能指标,4,0.5,"The uninstalled thrust (F_n) is the force produced by the engine alone, neglecting installation effects."
+13,Installed thrust,BoundaryCondition,General,GeneralPhysics,性能指标,4,0.5,The installed thrust F is equal to the uninstalled thrust F_n minus the inlet drag D_inlet and the nozzle drag D_nozzle.
+14,Inlet drag,Component,General,GeneralPhysics,安装损失,1,1.0,Drag associated with the engine intake aerodynamic forces.
+15,Nozzle drag,Component,Exhaust,GeneralPhysics,安装损失,1,1.0,Drag associated with the exhaust aft-end geometry and flow field.
+16,Thrust specific fuel consumption,Parameter,General,GeneralPhysics,性能指标,2,0.8,Thrust specific fuel consumption (TSFC or S) is defined as the mass flow rate of fuel divided by the thrust.
+17,TSFC,Parameter,General,GeneralPhysics,性能指标,2,0.8,Lower TSFC indicates a more fuel-efficient engine for a given thrust requirement.
+18,Thermal efficiency,Parameter,General,GeneralPhysics,性能指标,2,0.8,Thermal efficiency is the ratio of the rate of kinetic energy production to the thermal power input from fuel.
+19,Propulsive efficiency,Parameter,General,GeneralPhysics,性能指标,2,0.8,Propulsive efficiency measures how effectively the engine's kinetic energy output is converted into aircraft propulsive power.
+20,Overall efficiency,Parameter,General,GeneralPhysics,性能指标,2,0.8,The overall efficiency of a propulsion system is the product of its thermal and propulsive efficiencies.
+21,Specific thrust,Parameter,General,GeneralPhysics,性能指标,2,0.8,Specific thrust is the thrust produced per unit mass flow rate of air entering the engine.
+22,Bypass ratio,Parameter,General,GeneralPhysics,性能指标,2,0.8,The bypass ratio (alpha) is the ratio of the mass flow rate bypassing the core to the mass flow rate passing through the core.
+23,High bypass ratio,Parameter,General,GeneralPhysics,性能特性,2,0.8,High bypass ratio engines generally provide lower TSFC at subsonic cruise speeds.
+24,Continuity equation,Equation,General,GeneralPhysics,控制方程,3,0.6,The continuity equation expresses the principle of conservation of mass for a control volume.
+25,Momentum equation,Equation,General,GeneralPhysics,控制方程,3,0.6,The momentum equation expresses Newton's second law of motion for a fluid passing through a control volume.
+26,Energy equation,Equation,General,GeneralPhysics,控制方程,3,0.6,The energy equation is a statement of the first law of thermodynamics applied to a fluid flowing through a control volume.
+27,Steady flow,Parameter,General,FluidDynamics,流体特性,2,0.8,A flow is defined as steady if its properties at any point within the control volume do not vary with time.
+28,One-dimensional flow,Parameter,General,FluidDynamics,流体特性,2,0.8,A flow is one-dimensional if the fluid properties are uniform across any cross section perpendicular to the flow direction.
+29,Perfect gas,Parameter,General,GeneralPhysics,热力学基础,2,0.8,A perfect gas is a gas whose intermolecular forces are negligible and obeys the thermal equation of state P = rho*R*T.
+30,Calorically perfect gas,Parameter,General,GeneralPhysics,热力学基础,2,0.8,A calorically perfect gas is a perfect gas with constant specific heats (c_p and c_v are constants).
+31,Speed of sound,Parameter,General,GeneralPhysics,气体动力学,2,0.8,The speed of sound 'a' in a calorically perfect gas is given by a = sqrt(gamma * R * T).
+32,Mach number,Parameter,General,FluidDynamics,气体动力学,2,0.8,The Mach number M is defined as the ratio of the local fluid velocity V to the local speed of sound 'a'.
+33,Subsonic flow,Parameter,General,FluidDynamics,流动状态,2,0.8,Flow where the local Mach number is strictly less than 1.0.
+34,Supersonic flow,Parameter,General,FluidDynamics,流动状态,2,0.8,Flow where the local Mach number is strictly greater than 1.0.
+35,Sonic flow,Parameter,General,FluidDynamics,流动状态,2,0.8,Flow where the local Mach number is exactly equal to 1.0.
+36,Stagnation temperature,Parameter,General,Thermodynamics,热力学属性,2,0.8,Stagnation temperature (or total temperature) T_t represents the temperature achieved when a fluid is decelerated to zero velocity adiabatically.
+37,Stagnation pressure,Parameter,General,FluidDynamics,热力学属性,2,0.8,Stagnation pressure (or total pressure) P_t is the pressure attained when a fluid is brought to rest isentropically.
+38,Isentropic flow,Parameter,General,FluidDynamics,热力学过程,2,0.8,An isentropic flow is both adiabatic and reversible; entropy remains constant along a streamline.
+39,Area-Mach number relation,Equation,General,FluidDynamics,等熵流动,3,0.6,The area-Mach number relation links the cross-sectional area of a duct to the local Mach number for an isentropic flow.
+40,Convergent duct,Parameter,General,GeneralPhysics,气体动力学,2,0.8,"In a convergent duct, a supersonic flow slows down (Mach number decreases)."
+41,Divergent duct,Parameter,General,GeneralPhysics,气体动力学,2,0.8,"In a divergent duct, a supersonic flow accelerates (Mach number increases)."
+42,Throat,Parameter,General,GeneralPhysics,喷管几何,2,0.8,"The location of minimum cross-sectional area is called the throat, where the Mach number can reach unity."
+43,Choked flow,BoundaryCondition,General,FluidDynamics,流动状态,4,0.5,"When the Mach number at the throat reaches unity, the mass flow rate through the nozzle reaches its maximum possible value and is said to be choked."
+44,Normal shock,Parameter,General,GeneralPhysics,激波理论,2,0.8,A normal shock wave is a thin discontinuity perpendicular to the flow direction that can occur only in supersonic flow.
+45,Fanno flow,Parameter,General,FluidDynamics,管流理论,2,0.8,Fanno flow refers to adiabatic flow in a constant-area duct with friction.
+46,Rayleigh flow,Parameter,General,FluidDynamics,管流理论,2,0.8,Rayleigh flow refers to frictionless flow in a constant-area duct with heat transfer (heating or cooling).
+47,Thermal choking,Parameter,General,GeneralPhysics,管流理论,2,0.8,Maximum heat addition in a Rayleigh flow occurs when the Mach number reaches unity; further heating causes thermal choking.
+48,Heating in Rayleigh flow,Parameter,General,FluidDynamics,管流理论,2,0.8,Adding heat to a constant-area flow always results in a decrease in total pressure.
+49,Rocket engine,Component,General,GeneralPhysics,系统分类,1,1.0,"A rocket engine carries both its fuel and its oxidizer, allowing it to operate in a vacuum outside the atmosphere."
+50,Rocket thrust equation,Equation,General,GeneralPhysics,性能指标,3,0.6,The total thrust of a rocket is the sum of the momentum thrust and the pressure thrust: F = m_dot * V_e + (P_e - P_a) * A_e.
+51,Momentum thrust,Parameter,General,GeneralPhysics,性能指标,2,0.8,The component of thrust generated by the change in momentum of the exhaust gas (m_dot * V_e).
+52,Pressure thrust,Parameter,General,FluidDynamics,性能指标,2,0.8,The component of thrust due to the difference between exit pressure and ambient pressure ((P_e - P_a) * A_e).
+53,Effective exhaust velocity,Parameter,Exhaust,FluidDynamics,性能指标,2,0.8,"The effective exhaust velocity C is defined such that F = m_dot * C, which combines momentum and pressure effects."
+54,Specific impulse,Parameter,General,GeneralPhysics,性能指标,2,0.8,Specific impulse I_sp is the thrust divided by the propellant weight flow rate at sea level: I_sp = F / (m_dot * g_0).
+55,Characteristic velocity,Parameter,General,FluidDynamics,性能指标,2,0.8,"The characteristic velocity c* is a measure of the combustion chemical energy and efficiency, independent of nozzle characteristics."
+56,Thrust coefficient,Parameter,General,GeneralPhysics,性能指标,2,0.8,The thrust coefficient C_f measures the amplification of thrust achieved by expanding the gas through the nozzle.
+57,Optimum expansion,Parameter,Expansion,GeneralPhysics,喷管空气动力学,2,0.8,Maximum thrust for a given propellant mass flow and chamber condition occurs when the nozzle exit pressure equals the ambient pressure (P_e = P_a).
+58,Overexpanded nozzle,Component,Exhaust,GeneralPhysics,喷管空气动力学,1,1.0,A nozzle is overexpanded if the exit pressure is lower than the surrounding ambient atmospheric pressure.
+59,Oblique shock,Parameter,General,GeneralPhysics,喷管空气动力学,2,0.8,"When a nozzle is highly overexpanded, oblique shocks or flow separation occur at the nozzle exit."
+60,Underexpanded nozzle,Component,Exhaust,GeneralPhysics,喷管空气动力学,1,1.0,A nozzle is underexpanded if the gas exits at a pressure higher than the ambient atmospheric pressure.
+61,Expansion waves,Parameter,Expansion,GeneralPhysics,喷管空气动力学,2,0.8,Further expansion takes place outside the nozzle exit through expansion fans when P_e > P_a.
+62,Liquid propellant rocket,Parameter,General,GeneralPhysics,系统架构,2,0.8,Liquid rocket systems utilize liquid chemical propellants stored in separate tanks.
+63,Turbopump feed system,Component,General,GeneralPhysics,系统架构,1,1.0,High-thrust liquid rockets use turbopumps driven by a gas generator to force propellants into the high-pressure chamber.
+64,Pressure-fed system,Component,General,FluidDynamics,系统架构,1,1.0,A simpler feed system that uses regulated high-pressure gas to push propellants into the combustion chamber.
+65,Solid propellant rocket,Parameter,General,GeneralPhysics,系统架构,2,0.8,A solid rocket motor stores its fuel and oxidizer intimately mixed together as a solid block called the grain.
+66,Propellant grain,Parameter,General,GeneralPhysics,系统架构,2,0.8,Combustion takes place on the internal surfaces of the hollow cavity inside the solid grain.
+67,Progressive burning,Parameter,Combustion,GeneralPhysics,燃烧特性,2,0.8,A grain geometry that causes the burning surface area (and therefore thrust) to increase over time.
+68,Regressive burning,Parameter,Combustion,GeneralPhysics,燃烧特性,2,0.8,A grain geometry that causes the burning surface area (and therefore thrust) to decrease over time.
+69,Neutral burning,Parameter,Combustion,GeneralPhysics,燃烧特性,2,0.8,A grain geometry where the burning surface area remains relatively constant during the burn.
+70,Rocket equation,Equation,General,GeneralPhysics,飞行学基础,3,0.6,"The ideal rocket equation (Tsiolkovsky equation) is Delta_V = C * ln(m_i / m_f), neglecting gravity and drag."
+71,Initial rocket mass,Parameter,General,GeneralPhysics,结构质量,2,0.8,m_i = m_PL + m_s + m_p.
+72,Structural coefficient,Parameter,General,GeneralPhysics,结构质量,2,0.8,The structural coefficient (epsilon) is the ratio of the structural mass to the sum of the structural and propellant masses.
+73,Multistage rocket,Parameter,General,GeneralPhysics,系统优化,2,0.8,Multistage rockets discard the dead weight of empty tanks and structures of depleted stages to achieve higher final velocities.
+74,Payload ratio,Parameter,General,GeneralPhysics,系统优化,2,0.8,The ratio of the carried payload mass to the initial total mass of that specific rocket stage.
+75,Parametric cycle analysis,Equation,Cycle,GeneralPhysics,参数循环分析,3,0.6,The objective of parametric cycle analysis is to relate the engine performance parameters to the design choices and the flight environment.
+76,Station numbering,Station,General,GeneralPhysics,工程标准,5,0.3,"The gas turbine industry utilizes standard station numbering (e.g., 0 for ambient, 2 for compressor inlet, 3 for compressor exit, 4 for turbine inlet, 5 for turbine exit, 9 for nozzle exit)."
+77,Ideal cycle analysis,Equation,Cycle,GeneralPhysics,循环假设,3,0.6,Ideal cycle analysis assumes that the compression and expansion processes are reversible and adiabatic (isentropic).
+78,Total temperature ratio tau,Parameter,General,Thermodynamics,热力学参数,2,0.8,The dimensionless parameter tau represents the ratio of stagnation temperatures across a component.
+79,Total pressure ratio pi,Parameter,General,FluidDynamics,热力学参数,2,0.8,The dimensionless parameter pi represents the ratio of stagnation pressures across a component.
+80,Isentropic component,Parameter,General,GeneralPhysics,热力学关系,2,0.8,"For ideal isentropic components (compressor or turbine), the total pressure ratio and total temperature ratio are directly coupled."
+81,Ideal turbojet,Parameter,General,GeneralPhysics,发动机特性,2,0.8,"For a given maximum turbine inlet temperature, the specific thrust of an ideal turbojet drops to zero at a specific upper flight Mach number limit."
+82,Ideal afterburner,Component,Combustion,GeneralPhysics,发动机变体,1,1.0,An afterburner increases the total temperature of the gas entering the exhaust nozzle without affecting the turbomachinery core.
+83,Ideal turbofan,Parameter,General,GeneralPhysics,发动机变体,2,0.8,A turbofan engine divides the incoming air into a primary core stream and a secondary bypass stream.
+84,Bypass ratio alpha,Parameter,General,GeneralPhysics,性能指标,2,0.8,alpha = m_dot_bypass / m_dot_core.
+85,Fan turbine,Component,Expansion,GeneralPhysics,部件关系,1,1.0,"In a turbofan, a low-pressure turbine extracts energy from the core flow to drive the fan."
+86,Optimum bypass ratio,Parameter,General,GeneralPhysics,性能优化,2,0.8,There exists an mathematically optimum bypass ratio for a given core design that yields the absolute minimum TSFC.
+87,Ideal ramjet,Parameter,General,GeneralPhysics,发动机特性,2,0.8,A ramjet engine has no compressor or turbine; compression is achieved entirely through the dynamic pressure rise in the inlet.
+88,Optimal turbofan energy distribution,Parameter,General,GeneralPhysics,性能优化,2,0.8,"For an unmixed ideal turbofan, the optimum kinetic energy distribution occurs when the exit velocity of the bypass nozzle equals the exit velocity of the core nozzle."
+89,Real component performance,Parameter,General,GeneralPhysics,真实部件特性,2,0.8,"The performance of real components is characterized by total temperature ratios, total pressure ratios, efficiencies, and pressure losses."
+90,Inlet,Component,General,GeneralPhysics,进气道特性,1,1.0,"The performance of the inlet (or diffuser) is primarily characterized by its total pressure ratio, pi_d = P_t2 / P_t0, also called the inlet recovery factor."
+91,Inlet ram recovery,Component,General,GeneralPhysics,进气道特性,1,1.0,Military specifications (like MIL-E-5007D) define standard inlet recovery curves that decrease as the flight Mach number increases above 1.0.
+92,Inlet mass flow ratio,Component,General,FluidDynamics,进气道特性,1,1.0,The ratio of the actual mass flow entered into the inlet to the maximum possible mass flow that the capture area can intercept.
+93,Compressor,Component,Compression,GeneralPhysics,压气机特性,1,1.0,The isentropic compressor efficiency eta_c is defined as the ratio of ideal (isentropic) work to the actual work required for a given total pressure ratio.
+94,Compressor total temperature ratio tau_c,Component,Compression,Thermodynamics,压气机特性,1,1.0,"tau_c = 1 + (pi_c^((gamma-1)/gamma) - 1) / eta_c, which links actual temperature rise to pressure ratio."
+95,Polytropic efficiency,Parameter,General,GeneralPhysics,效率理论,2,0.8,"Polytropic efficiency (e_c for compressor, e_t for turbine) is defined as the isentropic efficiency of an elemental or infinitesimal stage."
+96,Compressor isentropic efficiency,Component,Compression,GeneralPhysics,效率理论,1,1.0,"For a constant polytropic efficiency e_c, the overall isentropic compressor efficiency eta_c drops as the total pressure ratio pi_c increases due to the preheating effect."
+97,Turbine total temperature ratio tau_t,Component,Expansion,Thermodynamics,涡轮特性,1,1.0,"tau_t = 1 - eta_t * (1 - pi_t^((gamma-1)/gamma)), which relates the temperature drop to the expansion pressure ratio."
+98,Turbine isentropic efficiency,Component,Expansion,GeneralPhysics,效率理论,1,1.0,"For a constant polytropic efficiency e_t, the overall isentropic turbine efficiency eta_t rises as the pressure ratio increases due to the reheating effect."
+99,Combustor,Component,Combustion,GeneralPhysics,燃烧室特性,1,1.0,Combustion efficiency eta_b is the ratio of the actual thermal energy released to the chemical energy available in the fuel.
+100,Combustor pressure loss,BoundaryCondition,Combustion,FluidDynamics,燃烧室特性,4,0.5,The total pressure ratio of the combustor pi_b = P_t4 / P_t3 is always less than 1.0 due to viscous friction and cold-to-hot flow momentum pressure drop.
+101,Afterburner,Component,Combustion,GeneralPhysics,加力燃烧室,1,1.0,The efficiency eta_AB measures how completely the fuel burns in the afterburner duct upstream of the exit nozzle.
+102,Afterburner pressure loss,BoundaryCondition,Combustion,FluidDynamics,加力燃烧室,4,0.5,"The total pressure ratio pi_AB = P_t7 / P_t6 account for losses due to flameholders, friction, and high-temperature heat addition."
+103,Mechanical transmission,Parameter,General,GeneralPhysics,机械传动,2,0.8,Mechanical efficiency eta_m accounts for frictional power losses in bearings and accessory gearboxes connecting the turbine and compressor shafts.
+104,Exhaust nozzle,Component,Exhaust,GeneralPhysics,喷管特性,1,1.0,"The exhaust nozzle performance is characterized by its total pressure ratio pi_n = P_t9 / P_t7, which represents friction losses in the nozzle duct."
+105,Nozzle angularity coefficient,Component,Exhaust,GeneralPhysics,喷管特性,1,1.0,"An angularity factor (or divergence factor C_ang) accounts for the non-axial exit velocity vector at the nozzle plane, reducing net thrust."
+106,Power take-off,Parameter,General,GeneralPhysics,系统能量,2,0.8,Extraction of mechanical shaft power (P_TO) to run aircraft accessories directly reduces the turbine power available to drive the compressor.
+107,Bleed air extraction,Parameter,General,GeneralPhysics,系统能量,2,0.8,Extracting high-pressure compressed air from the compressor exit for cabin environmental control systems (ECS) or turbine blade cooling reduces the downstream mass flow.
+108,Cooling air mixing,Parameter,General,GeneralPhysics,涡轮冷却,2,0.8,Reintroducing relatively cool bleed air into the turbine stages for blade cooling causes aerodynamic mixing losses and lowers the effective total temperature of the gas.
+109,Real rocket performance,Parameter,General,GeneralPhysics,真实火箭特性,2,0.8,"Analysis of real rocket engines requires accounting for non-ideal effects including nozzle efficiency, incomplete combustion, heat transfer, and complex chemical behaviors."
+110,Combustion chamber pressure,Parameter,Combustion,FluidDynamics,推力室特性,2,0.8,"Due to high-velocity combustion and friction inside the chamber, the total pressure drops from the injector head to the nozzle throat entrance."
+111,Real nozzle expansion,Component,Expansion,GeneralPhysics,喷管特性,1,1.0,Nozzle efficiency eta_n is defined as the ratio of actual kinetic energy change to the ideal isentropic kinetic energy change across the nozzle.
+112,Nozzle velocity coefficient,Component,Exhaust,FluidDynamics,喷管特性,1,1.0,The velocity coefficient C_v relates the actual exhaust velocity to the ideal velocity; typically C_v equals the square root of nozzle efficiency.
+113,Discharge coefficient,Parameter,General,GeneralPhysics,喷管特性,2,0.8,"The discharge coefficient C_d is the ratio of actual mass flow rate to the ideal isentropic mass flow rate, accounting for boundary layer displacement."
+114,Incomplete combustion,Parameter,Combustion,GeneralPhysics,燃烧损失,2,0.8,Failure to achieve perfect chemical equilibrium or full mixing of oxidizer and fuel lowers the combustion temperature T_c below its theoretical adiabatic value.
+115,Combustion efficiency,Parameter,Combustion,GeneralPhysics,燃烧损失,2,0.8,Combustion efficiency is often expressed as the ratio of actual characteristic velocity (c*_actual) to the theoretical characteristic velocity (c*_theoretical).
+116,Frozen flow,Parameter,General,FluidDynamics,化学动力学,2,0.8,Frozen flow assumes that the chemical composition of the exhaust gas remains constant (fixed at chamber exit state) during expansion through the nozzle.
+117,Equilibrium flow,Parameter,General,FluidDynamics,化学动力学,2,0.8,"Equilibrium flow assumes that chemical reactions occur instantaneously as pressure and temperature drop, continually adjusting composition to maintain local equilibrium."
+118,Real specific impulse,Parameter,General,GeneralPhysics,性能预测,2,0.8,The actual expansion process in a real rocket nozzle falls between the ideal frozen and shifting equilibrium bounds.
+119,Thrust chamber heat transfer,Parameter,General,Thermodynamics,传热损失,2,0.8,Heat loss through the chamber walls and nozzle liners directly reduces the thermal energy available for conversion into kinetic energy.
+120,Regenerative cooling,Parameter,General,GeneralPhysics,结构与传热,2,0.8,Regenerative cooling pumps the fuel or oxidizer through passages surrounding the thrust chamber wall to absorb heat before injection.
+121,Film cooling,Parameter,General,GeneralPhysics,结构与传热,2,0.8,Injecting a small portion of fuel or inert gas along the internal wall creates a protective film that shields the structure from high-temperature core gases.
+122,Liquid rocket cycle,Equation,Cycle,GeneralPhysics,动力循环,3,0.6,Liquid rocket engine cycles are classified into pressure-fed systems or pump-fed systems based on how propellants are pressurized.
+123,Pump-fed cycle,Equation,Cycle,GeneralPhysics,动力循环,3,0.6,A pump-fed open cycle where a fraction of the propellant is burned in a separate combustor to drive the turbine and is then exhausted overboard.
+124,Gas-generator cycle,Equation,Cycle,GeneralPhysics,动力循环,3,0.6,The gas generator must operate off-stoichiometric (extremely fuel-rich or oxidizer-rich) to prevent melting the turbine blades.
+125,Staged combustion cycle,Equation,Combustion,GeneralPhysics,动力循环,3,0.6,"Because the turbine exhaust is injected into the main chamber rather than dumped at low pressure, it allows extremely high chamber pressures (P_c) and higher efficiency."
+126,Turbopump power balance,Equation,General,GeneralPhysics,系统匹配,3,0.6,"In steady-state pump-fed cycles, the power produced by the turbine must equal the total mechanical power required to drive the oxidizer and fuel pumps."
+127,Pump power requirement,Component,General,GeneralPhysics,系统匹配,1,1.0,"The required shaft power for a propellant pump is proportional to the mass flow rate and pressure rise, divided by the pump efficiency (eta_p)."
+128,Real cycle analysis,Equation,Cycle,GeneralPhysics,真实循环分析,3,0.6,"Real engine cycle analysis incorporates component efficiencies, pressure losses, mechanical losses, and bleeding to predict realistic performance."
+129,Real turbojet,Parameter,General,GeneralPhysics,涡喷循环,2,0.8,The net thrust of a real turbojet must account for exit velocity variations caused by nozzle efficiency (eta_n) and incomplete expansion.
+130,Real turbojet efficiency,Parameter,General,GeneralPhysics,涡喷循环,2,0.8,"Irreversibilities in the compressor and turbine increase entropy, directly decreasing the specific thrust and increasing the TSFC."
+131,Turbine temperature ratio tau_t,Component,Expansion,Thermodynamics,性能匹配,1,1.0,"In a real turbojet, the turbine temperature drop is determined by the actual power required to drive the compressor: tau_t = 1 - (tau_lambda / tau_r) * (tau_c - 1) / (eta_m * (1 + f))."
+132,Fuel-air ratio f,Parameter,General,GeneralPhysics,性能匹配,2,0.8,The actual fuel-air ratio f accounts for combustor efficiency eta_b and variable specific heats across the burner.
+133,Real afterburner,Component,Combustion,GeneralPhysics,加力循环,1,1.0,"The afterburner burns remaining oxygen in the turbine exhaust gas, but its efficiency (eta_AB) is lower than the main combustor."
+134,Real turbofan,Parameter,General,GeneralPhysics,涡扇循环,2,0.8,Real turbofan cycle analysis must track the independent losses and state changes in both the core and the fan bypass duct.
+135,Constant-pressure mixer,Parameter,General,FluidDynamics,部件匹配,2,0.8,"For proper aerodynamic mixing, the core and bypass streams must enter the mixer at substantially equal static pressures (P_5 = P_15)."
+136,Mixer efficiency,Parameter,General,GeneralPhysics,部件匹配,2,0.8,"Aerodynamic mixing of streams with different total temperatures and velocities introduces viscous shearing losses, reducing overall total pressure."
+137,Optimum fan pressure ratio,Parameter,General,FluidDynamics,性能优化,2,0.8,There is a distinct optimum fan pressure ratio (pi_f) that maximizes specific thrust or minimizes TSFC for a given bypass ratio and core technology.
+138,Real turboprop,Parameter,General,GeneralPhysics,涡桨循环,2,0.8,A real turboprop splits the available turbine energy into shaft power to drive the propeller and a small amount of jet thrust from the exhaust.
+139,Propeller efficiency eta_prop,Parameter,General,GeneralPhysics,性能指标,2,0.8,The efficiency with which the propeller converts the brake shaft horsepower into effective aircraft propulsive power.
+140,Equivalent specific fuel consumption,Parameter,General,GeneralPhysics,性能指标,2,0.8,"For turboprops, ESFC (or S_e) combines the propeller shaft power and residual jet thrust into a single performance parameter."
+141,Turbine expansion split,Component,Expansion,GeneralPhysics,性能优化,1,1.0,There is an optimum balance between how much expansion occurs in the turbine (for shaft power) versus the exhaust nozzle (for jet thrust) to maximize total equivalent thrust.
+142,Off-design analysis,Equation,General,GeneralPhysics,性能预测,3,0.6,Engine performance analysis (or off-design analysis) predicts the performance of a specific engine across various flight conditions and throttle settings.
+143,Fixed geometry,Parameter,General,GeneralPhysics,运行约束,2,0.8,"For a built engine, the physical throat areas of turbines and nozzles are geometrically fixed, which locks the aerodynamic coupling."
+144,Corrected mass flow,Parameter,General,FluidDynamics,相似准则,2,0.8,"Corrected mass flow rate m_dot_c is defined as m_dot * sqrt(theta) / delta, allowing data from different conditions to be collapsed onto a single curve."
+145,Corrected speed,Parameter,General,GeneralPhysics,相似准则,2,0.8,N_c = N / sqrt(theta). It relates the blade tip Mach number to the aerodynamic performance of turbomachinery.
+146,Component matching,Parameter,General,GeneralPhysics,整机匹配,2,0.8,"Steady-state off-design operation requires that the mass flow entering a component matches downstream constraints, and the turbine power balances the compressor power."
+147,Choked turbine stator,BoundaryCondition,Expansion,GeneralPhysics,整机匹配,4,0.5,"If the high-pressure turbine nozzle guides are choked, the corrected mass flow exiting the compressor remains essentially constant, creating a fixed pumping constraint."
+148,Compressor operating line,Component,Compression,GeneralPhysics,整机匹配,1,1.0,The steady-state compressor operating line on a compressor map is determined by the fixed throat area of the downstream turbine and exhaust nozzle.
+149,Choked exhaust nozzle,BoundaryCondition,Exhaust,GeneralPhysics,整机匹配,4,0.5,"When the convergent exhaust nozzle is choked, the operating pressure ratio across the turbine becomes independent of ambient pressure."
+150,Control system,Component,General,Control,发动机控制,1,1.0,The fuel control unit (FCU) adjusts the fuel flow to match pilot thrust demands while keeping the engine within safety limits.
+151,Engine limit,BoundaryCondition,General,GeneralPhysics,发动机控制,4,0.5,Mechanical stress restricts the maximum physical or corrected rotational speed of the fan spool.
+152,Theta_break,Parameter,General,GeneralPhysics,发动机控制,2,0.8,Theta_break represents the ambient temperature point where the engine control transitions from limiting maximum compressor pressure ratio to limiting maximum turbine inlet temperature.
+153,Cold day operation,BoundaryCondition,General,GeneralPhysics,发动机控制,4,0.5,"At low ambient temperatures (below theta_break), the engine is typically limited by mechanical limits like pressure or spool speed."
+154,Hot day operation,BoundaryCondition,General,GeneralPhysics,发动机控制,4,0.5,"At high ambient temperatures (above theta_break), the engine control reduces fuel flow to protect the turbine from overheating, dropping the thrust."
+155,Throttle hook,Parameter,General,GeneralPhysics,运行特性,2,0.8,A throttle hook is a curve showing the relationship between thrust and thrust specific fuel consumption at a constant flight condition as the throttle is varied.
+156,Transient operation,BoundaryCondition,General,GeneralPhysics,过渡态,4,0.5,"During acceleration, the turbine power must exceed the compressor power to accelerate the spool rotor inertia, causing the operating line to transiently swing toward the stall line."
+157,Thrust,Parameter,General,GeneralPhysics,系统原理,2,0.8,A propulsion system is a machine that produces thrust to move an object forward.
+158,Atmospheric oxygen,Parameter,General,GeneralPhysics,工作原理,2,0.8,An airbreathing engine utilizes the oxygen in the atmospheric air to burn the fuel carried within the vehicle.
+159,Fuel and Oxidizer,Parameter,General,GeneralPhysics,工作原理,2,0.8,A non-airbreathing engine carries both the fuel and the oxidizer required for combustion.
+160,Gas turbine engine,Component,Expansion,GeneralPhysics,部件关系,1,1.0,The core of any gas turbine engine is the gas generator.
+161,Fan,Parameter,General,GeneralPhysics,结构组成,2,0.8,A turbofan engine adds a fan driven by an additional turbine stage or a separate spool.
+162,Propeller,Parameter,General,GeneralPhysics,结构组成,2,0.8,A turboprop engine uses a gas turbine core to drive a propeller through a reduction gearbox.
+163,Shaft power,Parameter,General,GeneralPhysics,输出特性,2,0.8,"A turboshaft engine delivers power to a shaft to drive something other than a propeller, such as a helicopter rotor."
+164,Moving parts,Parameter,General,GeneralPhysics,结构特性,2,0.8,The ramjet engine has no moving parts (no compressor or turbine) and relies on forward speed to compress air.
+165,Intermittent combustion,Parameter,Combustion,GeneralPhysics,工作原理,2,0.8,A pulsejet engine operates with periodic or intermittent combustion using valves or acoustic geometry.
+166,Internal performance,Parameter,General,GeneralPhysics,性能指标,2,0.8,"The uninstalled thrust (F_n) is the force produced by the engine alone, neglecting installation effects."
+167,Inlet installation,BoundaryCondition,General,GeneralPhysics,安装损失,4,0.5,Drag associated with the engine intake aerodynamic forces.
+168,Nozzle installation,BoundaryCondition,Exhaust,GeneralPhysics,安装损失,4,0.5,Drag associated with the exhaust aft-end geometry and flow field.
+169,Fuel mass flow per unit thrust,Parameter,General,FluidDynamics,性能指标,2,0.8,Thrust specific fuel consumption (TSFC or S) is defined as the mass flow rate of fuel divided by the thrust.
+170,Engine fuel efficiency,Component,General,GeneralPhysics,性能指标,1,1.0,Lower TSFC indicates a more fuel-efficient engine for a given thrust requirement.
+171,Heat conversion to kinetic energy,Parameter,General,Thermodynamics,性能指标,2,0.8,Thermal efficiency is the ratio of the rate of kinetic energy production to the thermal power input from fuel.
+172,Kinetic energy conversion to thrust power,Parameter,General,GeneralPhysics,性能指标,2,0.8,Propulsive efficiency measures how effectively the engine's kinetic energy output is converted into aircraft propulsive power.
+173,Thermal efficiency and Propulsive efficiency,Parameter,General,GeneralPhysics,性能指标,2,0.8,The overall efficiency of a propulsion system is the product of its thermal and propulsive efficiencies.
+174,Thrust per unit air mass flow,Parameter,General,FluidDynamics,性能指标,2,0.8,Specific thrust is the thrust produced per unit mass flow rate of air entering the engine.
+175,Fan mass flow to core mass flow,Parameter,General,FluidDynamics,性能指标,2,0.8,The bypass ratio (alpha) is the ratio of the mass flow rate bypassing the core to the mass flow rate passing through the core.
+176,Lower TSFC,Parameter,General,GeneralPhysics,性能特性,2,0.8,High bypass ratio engines generally provide lower TSFC at subsonic cruise speeds.
+177,Conservation of mass,Parameter,General,GeneralPhysics,控制方程,2,0.8,The continuity equation expresses the principle of conservation of mass for a control volume.
+178,Newton's second law,Equation,General,GeneralPhysics,控制方程,3,0.6,The momentum equation expresses Newton's second law of motion for a fluid passing through a control volume.
+179,First law of thermodynamics,Equation,General,GeneralPhysics,控制方程,3,0.6,The energy equation is a statement of the first law of thermodynamics applied to a fluid flowing through a control volume.
+180,Time-independent properties,Parameter,General,GeneralPhysics,流体特性,2,0.8,A flow is defined as steady if its properties at any point within the control volume do not vary with time.
+181,Uniform properties across cross section,Parameter,General,GeneralPhysics,流体特性,2,0.8,A flow is one-dimensional if the fluid properties are uniform across any cross section perpendicular to the flow direction.
+182,Thermal equation of state,Equation,General,GeneralPhysics,热力学基础,3,0.6,A perfect gas is a gas whose intermolecular forces are negligible and obeys the thermal equation of state P = rho*R*T.
+183,Constant specific heats,Parameter,General,Thermodynamics,热力学基础,2,0.8,A calorically perfect gas is a perfect gas with constant specific heats (c_p and c_v are constants).
+184,Square root of gamma*R*T,Parameter,General,GeneralPhysics,气体动力学,2,0.8,The speed of sound 'a' in a calorically perfect gas is given by a = sqrt(gamma * R * T).
+185,Ratio of velocity to speed of sound,Parameter,General,FluidDynamics,气体动力学,2,0.8,The Mach number M is defined as the ratio of the local fluid velocity V to the local speed of sound 'a'.
+186,Mach number less than one,Parameter,General,FluidDynamics,流动状态,2,0.8,Flow where the local Mach number is strictly less than 1.0.
+187,Mach number greater than one,Parameter,General,FluidDynamics,流动状态,2,0.8,Flow where the local Mach number is strictly greater than 1.0.
+188,Mach number equal to one,Parameter,General,FluidDynamics,流动状态,2,0.8,Flow where the local Mach number is exactly equal to 1.0.
+189,Total enthalpy of gas,Parameter,General,Thermodynamics,热力学属性,2,0.8,Stagnation temperature (or total temperature) T_t represents the temperature achieved when a fluid is decelerated to zero velocity adiabatically.
+190,Aerodynamic heating,Parameter,General,Thermodynamics,热力学属性,2,0.8,The increase in temperature associated with deceleration of a high-speed flow is called aerodynamic heating.
+191,Pressure at zero velocity isentropically,Parameter,General,FluidDynamics,热力学属性,2,0.8,Stagnation pressure (or total pressure) P_t is the pressure attained when a fluid is brought to rest isentropically.
+192,Constant entropy,Parameter,General,Thermodynamics,热力学过程,2,0.8,An isentropic flow is both adiabatic and reversible; entropy remains constant along a streamline.
+193,Flow area variation with Mach number,Parameter,General,FluidDynamics,等熵流动,2,0.8,The area-Mach number relation links the cross-sectional area of a duct to the local Mach number for an isentropic flow.
+194,Convergent-divergent nozzle,Component,Exhaust,GeneralPhysics,喷管几何,1,1.0,"The location of minimum cross-sectional area is called the throat, where the Mach number can reach unity."
+195,Mass flow maximum limit,BoundaryCondition,General,FluidDynamics,流动状态,4,0.5,"When the Mach number at the throat reaches unity, the mass flow rate through the nozzle reaches its maximum possible value and is said to be choked."
+196,Discontinuity in supersonic flow,Parameter,General,FluidDynamics,激波理论,2,0.8,A normal shock wave is a thin discontinuity perpendicular to the flow direction that can occur only in supersonic flow.
+197,Supersonic to Subsonic,Parameter,General,GeneralPhysics,激波理论,2,0.8,The Mach number always drops from a supersonic value upstream to a subsonic value downstream of a normal shock.
+198,Static pressure,Parameter,General,FluidDynamics,激波理论,2,0.8,Static pressure increases significantly across a normal shock wave.
+199,Static temperature,Parameter,General,Thermodynamics,激波理论,2,0.8,Static temperature increases across a normal shock wave.
+200,Total pressure,Parameter,General,FluidDynamics,激波理论,2,0.8,"The total pressure decreases across a normal shock, which represents an irreversibility (entropy rise) in the flow."
+201,Constant area flow with friction,Parameter,General,FluidDynamics,管流理论,2,0.8,Fanno flow refers to adiabatic flow in a constant-area duct with friction.
+202,Unity,Parameter,General,GeneralPhysics,管流理论,2,0.8,"Friction always drives the Mach number toward unity in Fanno flow, whether the inlet flow is subsonic or supersonic."
+203,Constant area flow with heat transfer,Parameter,General,FluidDynamics,管流理论,2,0.8,Rayleigh flow refers to frictionless flow in a constant-area duct with heat transfer (heating or cooling).
+204,Maximum heat addition,Parameter,General,Thermodynamics,管流理论,2,0.8,Maximum heat addition in a Rayleigh flow occurs when the Mach number reaches unity; further heating causes thermal choking.
+205,Momentum thrust and Pressure thrust,Parameter,General,FluidDynamics,性能指标,2,0.8,The total thrust of a rocket is the sum of the momentum thrust and the pressure thrust: F = m_dot * V_e + (P_e - P_a) * A_e.
+206,Mass flow rate times Exhaust velocity,Parameter,Exhaust,FluidDynamics,性能指标,2,0.8,The component of thrust generated by the change in momentum of the exhaust gas (m_dot * V_e).
+207,Pressure difference times Nozzle exit area,Component,Exhaust,FluidDynamics,性能指标,1,1.0,The component of thrust due to the difference between exit pressure and ambient pressure ((P_e - P_a) * A_e).
+208,Thrust divided by Mass flow rate,Parameter,General,FluidDynamics,性能指标,2,0.8,"The effective exhaust velocity C is defined such that F = m_dot * C, which combines momentum and pressure effects."
+209,Thrust per unit weight flow rate,Parameter,General,FluidDynamics,性能指标,2,0.8,Specific impulse I_sp is the thrust divided by the propellant weight flow rate at sea level: I_sp = F / (m_dot * g_0).
+210,Combustion chamber performance,Parameter,Combustion,GeneralPhysics,性能指标,2,0.8,"The characteristic velocity c* is a measure of the combustion chemical energy and efficiency, independent of nozzle characteristics."
+211,Chamber pressure and Throat area,Parameter,General,FluidDynamics,性能指标,2,0.8,c* = (P_c * A_t) / m_dot. It depends primarily on combustion temperature and molecular weight.
+212,Nozzle expansion efficiency,Component,Expansion,GeneralPhysics,性能指标,1,1.0,The thrust coefficient C_f measures the amplification of thrust achieved by expanding the gas through the nozzle.
+213,Thrust and Chamber pressure,Parameter,General,FluidDynamics,性能指标,2,0.8,C_f = F / (P_c * A_t). It is a function of the pressure ratio and area ratio of the nozzle.
+214,Exit pressure equals Ambient pressure,Parameter,General,FluidDynamics,喷管空气动力学,2,0.8,Maximum thrust for a given propellant mass flow and chamber condition occurs when the nozzle exit pressure equals the ambient pressure (P_e = P_a).
+215,Exit pressure less than Ambient pressure,Parameter,General,FluidDynamics,喷管空气动力学,2,0.8,A nozzle is overexpanded if the exit pressure is lower than the surrounding ambient atmospheric pressure.
+216,Exit pressure greater than Ambient pressure,Parameter,General,FluidDynamics,喷管空气动力学,2,0.8,A nozzle is underexpanded if the gas exits at a pressure higher than the ambient atmospheric pressure.
+217,Liquid fuel and Liquid oxidizer,Parameter,General,GeneralPhysics,系统架构,2,0.8,Liquid rocket systems utilize liquid chemical propellants stored in separate tanks.
+218,Propellants to combustion chamber,Parameter,Combustion,GeneralPhysics,系统架构,2,0.8,High-thrust liquid rockets use turbopumps driven by a gas generator to force propellants into the high-pressure chamber.
+219,High pressure gas tank,Parameter,General,FluidDynamics,系统架构,2,0.8,A simpler feed system that uses regulated high-pressure gas to push propellants into the combustion chamber.
+220,Exposed cavity surface,Parameter,General,GeneralPhysics,系统架构,2,0.8,Combustion takes place on the internal surfaces of the hollow cavity inside the solid grain.
+221,Thrust increasing with time,Parameter,General,GeneralPhysics,燃烧特性,2,0.8,A grain geometry that causes the burning surface area (and therefore thrust) to increase over time.
+222,Thrust decreasing with time,Parameter,General,GeneralPhysics,燃烧特性,2,0.8,A grain geometry that causes the burning surface area (and therefore thrust) to decrease over time.
+223,Constant thrust with time,Parameter,General,GeneralPhysics,燃烧特性,2,0.8,A grain geometry where the burning surface area remains relatively constant during the burn.
+224,Velocity gain to Mass ratio,Parameter,General,FluidDynamics,飞行学基础,2,0.8,"The ideal rocket equation (Tsiolkovsky equation) is Delta_V = C * ln(m_i / m_f), neglecting gravity and drag."
+225,Payload and Structural mass and Propellant mass,Parameter,General,GeneralPhysics,结构质量,2,0.8,m_i = m_PL + m_s + m_p.
+226,Structural mass to Total stage mass,Parameter,General,GeneralPhysics,结构质量,2,0.8,The structural coefficient (epsilon) is the ratio of the structural mass to the sum of the structural and propellant masses.
+227,Empty structural mass,Parameter,General,GeneralPhysics,系统优化,2,0.8,Multistage rockets discard the dead weight of empty tanks and structures of depleted stages to achieve higher final velocities.
+228,Payload mass to Initial mass,Parameter,General,GeneralPhysics,系统优化,2,0.8,The ratio of the carried payload mass to the initial total mass of that specific rocket stage.
+229,Determine performance trends,Parameter,General,GeneralPhysics,参数循环分析,2,0.8,The objective of parametric cycle analysis is to relate the engine performance parameters to the design choices and the flight environment.
+230,SAE Aerospace Standard,Parameter,General,GeneralPhysics,工程标准,2,0.8,"The gas turbine industry utilizes standard station numbering (e.g., 0 for ambient, 2 for compressor inlet, 3 for compressor exit, 4 for turbine inlet, 5 for turbine exit, 9 for nozzle exit)."
+231,Isentropic compression and expansion,Parameter,Compression,GeneralPhysics,循环假设,2,0.8,Ideal cycle analysis assumes that the compression and expansion processes are reversible and adiabatic (isentropic).
+232,Constant pressure combustion,Parameter,Combustion,FluidDynamics,循环假设,2,0.8,It is assumed that combustion occurs at constant total pressure (no pressure drop in the combustor).
+233,Fuel mass flow rate,Parameter,General,FluidDynamics,循环假设,2,0.8,The mass flow rate of fuel is neglected relative to the air mass flow rate in ideal performance matching (m_dot_f << m_dot_a).
+234,Exit total temperature over Inlet total temperature,Component,General,Thermodynamics,热力学参数,1,1.0,The dimensionless parameter tau represents the ratio of stagnation temperatures across a component.
+235,Exit total pressure over Inlet total pressure,Component,General,FluidDynamics,热力学参数,1,1.0,The dimensionless parameter pi represents the ratio of stagnation pressures across a component.
+236,Pi equals tau to power of gamma over gamma-1,Parameter,General,GeneralPhysics,热力学关系,2,0.8,"For ideal isentropic components (compressor or turbine), the total pressure ratio and total temperature ratio are directly coupled."
+237,High Mach limit,BoundaryCondition,General,FluidDynamics,发动机特性,4,0.5,"For a given maximum turbine inlet temperature, the specific thrust of an ideal turbojet drops to zero at a specific upper flight Mach number limit."
+238,Optimum compressor pressure ratio,Component,Compression,FluidDynamics,性能优化,1,1.0,"For a fixed flight condition and turbine inlet temperature, there is an optimum compressor pressure ratio that maximizes the specific thrust of a turbojet."
+239,Stagnation temperature at nozzle,Component,Exhaust,Thermodynamics,发动机变体,1,1.0,An afterburner increases the total temperature of the gas entering the exhaust nozzle without affecting the turbomachinery core.
+240,Core flow and Bypass flow,Parameter,General,FluidDynamics,发动机变体,2,0.8,A turbofan engine divides the incoming air into a primary core stream and a secondary bypass stream.
+241,Bypass mass flow divided by Core mass flow,Parameter,General,FluidDynamics,性能指标,2,0.8,alpha = m_dot_bypass / m_dot_core.
+242,Turbomachinery,Parameter,General,FluidDynamics,发动机特性,2,0.8,A ramjet engine has no compressor or turbine; compression is achieved entirely through the dynamic pressure rise in the inlet.
+243,Zero static thrust,Parameter,General,GeneralPhysics,发动机特性,2,0.8,An ideal ramjet cannot produce any thrust at zero flight velocity (Mach = 0) because it lacks a mechanical compressor.
+244,Bypass and Core exit velocities to be equal,Parameter,General,GeneralPhysics,性能优化,2,0.8,"For an unmixed ideal turbofan, the optimum kinetic energy distribution occurs when the exit velocity of the bypass nozzle equals the exit velocity of the core nozzle."
+245,Component efficiencies and Total pressure ratios,Parameter,General,FluidDynamics,真实部件特性,2,0.8,"The performance of real components is characterized by total temperature ratios, total pressure ratios, efficiencies, and pressure losses."
+246,Total pressure ratio pi_d,Parameter,General,FluidDynamics,进气道特性,2,0.8,"The performance of the inlet (or diffuser) is primarily characterized by its total pressure ratio, pi_d = P_t2 / P_t0, also called the inlet recovery factor."
+247,Flight Mach number,Parameter,General,FluidDynamics,进气道特性,2,0.8,Military specifications (like MIL-E-5007D) define standard inlet recovery curves that decrease as the flight Mach number increases above 1.0.
+248,Capture area air mass flow to Maximum air mass flow,Parameter,General,FluidDynamics,进气道特性,2,0.8,The ratio of the actual mass flow entered into the inlet to the maximum possible mass flow that the capture area can intercept.
+249,Isentropic efficiency eta_c,Parameter,General,GeneralPhysics,压气机特性,2,0.8,The isentropic compressor efficiency eta_c is defined as the ratio of ideal (isentropic) work to the actual work required for a given total pressure ratio.
+250,Isentropic efficiency and Total pressure ratio,Parameter,General,FluidDynamics,压气机特性,2,0.8,"tau_c = 1 + (pi_c^((gamma-1)/gamma) - 1) / eta_c, which links actual temperature rise to pressure ratio."
+251,Isentropic efficiency of an infinitesimal stage,Parameter,General,GeneralPhysics,效率理论,2,0.8,"Polytropic efficiency (e_c for compressor, e_t for turbine) is defined as the isentropic efficiency of an elemental or infinitesimal stage."
+252,Increasing pressure ratio,Parameter,General,FluidDynamics,效率理论,2,0.8,"For a constant polytropic efficiency e_c, the overall isentropic compressor efficiency eta_c drops as the total pressure ratio pi_c increases due to the preheating effect."
+253,Isentropic efficiency eta_t,Parameter,General,GeneralPhysics,涡轮特性,2,0.8,The isentropic turbine efficiency eta_t is defined as the ratio of actual work output to the ideal (isentropic) work output for a given total pressure ratio.
+254,Combustion efficiency eta_b,Parameter,Combustion,GeneralPhysics,燃烧室特性,2,0.8,Combustion efficiency eta_b is the ratio of the actual thermal energy released to the chemical energy available in the fuel.
+255,Total pressure ratio pi_b,Parameter,General,FluidDynamics,燃烧室特性,2,0.8,The total pressure ratio of the combustor pi_b = P_t4 / P_t3 is always less than 1.0 due to viscous friction and cold-to-hot flow momentum pressure drop.
+256,Friction and Fundamental thermal loading,Parameter,General,GeneralPhysics,燃烧室特性,2,0.8,Total pressure drops because of skin friction in the liner liners/swirlers and the fundamental thermodynamic loss from adding heat at finite Mach numbers.
+257,Afterburner efficiency eta_AB,Component,Combustion,GeneralPhysics,加力燃烧室,1,1.0,The efficiency eta_AB measures how completely the fuel burns in the afterburner duct upstream of the exit nozzle.
+258,Total pressure ratio pi_AB,Parameter,General,FluidDynamics,加力燃烧室,2,0.8,"The total pressure ratio pi_AB = P_t7 / P_t6 account for losses due to flameholders, friction, and high-temperature heat addition."
+259,Mechanical efficiency eta_m,Parameter,General,GeneralPhysics,机械传动,2,0.8,Mechanical efficiency eta_m accounts for frictional power losses in bearings and accessory gearboxes connecting the turbine and compressor shafts.
+260,Total pressure ratio pi_n,Parameter,General,FluidDynamics,喷管特性,2,0.8,"The exhaust nozzle performance is characterized by its total pressure ratio pi_n = P_t9 / P_t7, which represents friction losses in the nozzle duct."
+261,Exit momentum thrust,Parameter,General,GeneralPhysics,喷管特性,2,0.8,"An angularity factor (or divergence factor C_ang) accounts for the non-axial exit velocity vector at the nozzle plane, reducing net thrust."
+262,Available turbine power for compression,Component,Compression,GeneralPhysics,系统能量,1,1.0,Extraction of mechanical shaft power (P_TO) to run aircraft accessories directly reduces the turbine power available to drive the compressor.
+263,Core mass flow rate,Parameter,General,FluidDynamics,系统能量,2,0.8,Extracting high-pressure compressed air from the compressor exit for cabin environmental control systems (ECS) or turbine blade cooling reduces the downstream mass flow.
+264,Turbine inlet stagnation temperature,Component,Expansion,Thermodynamics,涡轮冷却,1,1.0,Reintroducing relatively cool bleed air into the turbine stages for blade cooling causes aerodynamic mixing losses and lowers the effective total temperature of the gas.
+265,Component efficiencies and Chemical reactions,Parameter,General,GeneralPhysics,真实火箭特性,2,0.8,"Analysis of real rocket engines requires accounting for non-ideal effects including nozzle efficiency, incomplete combustion, heat transfer, and complex chemical behaviors."
+266,Stagnation pressure at throat,Parameter,General,FluidDynamics,推力室特性,2,0.8,"Due to high-velocity combustion and friction inside the chamber, the total pressure drops from the injector head to the nozzle throat entrance."
+267,Nozzle efficiency eta_n,Component,Exhaust,GeneralPhysics,喷管特性,1,1.0,Nozzle efficiency eta_n is defined as the ratio of actual kinetic energy change to the ideal isentropic kinetic energy change across the nozzle.
+268,Actual exit velocity divided by Isentropic velocity,Parameter,General,FluidDynamics,喷管特性,2,0.8,The velocity coefficient C_v relates the actual exhaust velocity to the ideal velocity; typically C_v equals the square root of nozzle efficiency.
+269,Mass flow rate deviation,Parameter,General,FluidDynamics,喷管特性,2,0.8,"The discharge coefficient C_d is the ratio of actual mass flow rate to the ideal isentropic mass flow rate, accounting for boundary layer displacement."
+270,Chamber stagnation temperature,Parameter,General,Thermodynamics,燃烧损失,2,0.8,Failure to achieve perfect chemical equilibrium or full mixing of oxidizer and fuel lowers the combustion temperature T_c below its theoretical adiabatic value.
+271,Characteristic velocity ratio,Parameter,General,FluidDynamics,燃烧损失,2,0.8,Combustion efficiency is often expressed as the ratio of actual characteristic velocity (c*_actual) to the theoretical characteristic velocity (c*_theoretical).
+272,Fixed chemical composition,Parameter,General,GeneralPhysics,化学动力学,2,0.8,Frozen flow assumes that the chemical composition of the exhaust gas remains constant (fixed at chamber exit state) during expansion through the nozzle.
+273,Instantaneous chemical reaction,Parameter,General,GeneralPhysics,化学动力学,2,0.8,"Equilibrium flow assumes that chemical reactions occur instantaneously as pressure and temperature drop, continually adjusting composition to maintain local equilibrium."
+274,Higher specific impulse,Parameter,General,GeneralPhysics,化学动力学,2,0.8,Equilibrium flow gives higher calculated exhaust velocity and specific impulse than frozen flow because chemical recombination energy is recovered as kinetic energy.
+275,Frozen flow and Equilibrium flow limits,BoundaryCondition,General,FluidDynamics,性能预测,4,0.5,The actual expansion process in a real rocket nozzle falls between the ideal frozen and shifting equilibrium bounds.
+276,Exhaust gas enthalpy,Parameter,Exhaust,Thermodynamics,传热损失,2,0.8,Heat loss through the chamber walls and nozzle liners directly reduces the thermal energy available for conversion into kinetic energy.
+277,Fuel through cooling jackets,Parameter,General,GeneralPhysics,结构与传热,2,0.8,Regenerative cooling pumps the fuel or oxidizer through passages surrounding the thrust chamber wall to absorb heat before injection.
+278,Wall heat loss,BoundaryCondition,General,Thermodynamics,结构与传热,4,0.5,"The heat absorbed by the coolant is reintroduced into the combustion chamber, preventing a net thermodynamic energy loss."
+279,Cooling fluid boundary layer,BoundaryCondition,General,GeneralPhysics,结构与传热,4,0.5,Injecting a small portion of fuel or inert gas along the internal wall creates a protective film that shields the structure from high-temperature core gases.
+280,Pressure-fed cycle,Equation,Cycle,FluidDynamics,动力循环,3,0.6,Liquid rocket engine cycles are classified into pressure-fed systems or pump-fed systems based on how propellants are pressurized.
+281,Expander cycle,Equation,Cycle,GeneralPhysics,动力循环,3,0.6,A closed cycle where fuel is vaporized in the cooling jacket and then routes directly through the turbine to drive the pumps before entering the injector.
+282,Turbine inlet temperature,Component,Expansion,Thermodynamics,动力循环,1,1.0,The gas generator must operate off-stoichiometric (extremely fuel-rich or oxidizer-rich) to prevent melting the turbine blades.
+283,Higher chamber pressure,Parameter,General,FluidDynamics,动力循环,2,0.8,"Because the turbine exhaust is injected into the main chamber rather than dumped at low pressure, it allows extremely high chamber pressures (P_c) and higher efficiency."
+284,Turbine power equals Pump power,Component,Expansion,GeneralPhysics,系统匹配,1,1.0,"In steady-state pump-fed cycles, the power produced by the turbine must equal the total mechanical power required to drive the oxidizer and fuel pumps."
+285,Volumetric flow rate and Pressure rise,Parameter,General,FluidDynamics,系统匹配,2,0.8,"The required shaft power for a propellant pump is proportional to the mass flow rate and pressure rise, divided by the pump efficiency (eta_p)."
+286,Component efficiencies and fluid losses,BoundaryCondition,General,GeneralPhysics,真实循环分析,4,0.5,"Real engine cycle analysis incorporates component efficiencies, pressure losses, mechanical losses, and bleeding to predict realistic performance."
+287,Viscous and shock losses,BoundaryCondition,General,GeneralPhysics,真实循环分析,4,0.5,"In real engines, component total pressure ratios (like pi_d, pi_b, pi_n) are less than 1.0 due to friction and shock waves."
+288,Real exit velocity and pressure,Parameter,General,FluidDynamics,涡喷循环,2,0.8,The net thrust of a real turbojet must account for exit velocity variations caused by nozzle efficiency (eta_n) and incomplete expansion.
+289,Component irreversibilities,BoundaryCondition,General,GeneralPhysics,涡喷循环,4,0.5,"Irreversibilities in the compressor and turbine increase entropy, directly decreasing the specific thrust and increasing the TSFC."
+290,Compressor power balance,Equation,Compression,GeneralPhysics,性能匹配,3,0.6,"In a real turbojet, the turbine temperature drop is determined by the actual power required to drive the compressor: tau_t = 1 - (tau_lambda / tau_r) * (tau_c - 1) / (eta_m * (1 + f))."
+291,Combustor energy balance,Equation,Combustion,GeneralPhysics,性能匹配,3,0.6,The actual fuel-air ratio f accounts for combustor efficiency eta_b and variable specific heats across the burner.
+292,Additional fuel injection,Parameter,General,GeneralPhysics,加力循环,2,0.8,"The afterburner burns remaining oxygen in the turbine exhaust gas, but its efficiency (eta_AB) is lower than the main combustor."
+293,High total pressure drop,BoundaryCondition,General,FluidDynamics,加力循环,4,0.5,Adding heat at a finite Mach number inside the afterburner duct causes a fundamental thermal total pressure drop (Rayleigh effect).
+294,Core stream and Bypass stream,Parameter,General,GeneralPhysics,涡扇循环,2,0.8,Real turbofan cycle analysis must track the independent losses and state changes in both the core and the fan bypass duct.
+295,Unmixed turbofan,Parameter,General,GeneralPhysics,涡扇循环,2,0.8,An engine configuration where the core and bypass streams exhaust through separate independent nozzles.
+296,Mixed-flow turbofan,Parameter,General,FluidDynamics,涡扇循环,2,0.8,An engine configuration where the core and bypass streams mix in a common mixer component before expanding through a single nozzle.
+297,Equal static pressures at inlet,Component,General,FluidDynamics,部件匹配,1,1.0,"For proper aerodynamic mixing, the core and bypass streams must enter the mixer at substantially equal static pressures (P_5 = P_15)."
+298,Total pressure gain or loss,BoundaryCondition,General,FluidDynamics,部件匹配,4,0.5,"Aerodynamic mixing of streams with different total temperatures and velocities introduces viscous shearing losses, reducing overall total pressure."
+299,Component efficiencies,Parameter,General,GeneralPhysics,性能优化,2,0.8,Lower component efficiencies (like lower fan or turbine efficiency) shift the optimum bypass ratio (alpha) toward lower values compared to ideal cycles.
+300,Specific thrust of turbofan,Parameter,General,GeneralPhysics,性能优化,2,0.8,There is a distinct optimum fan pressure ratio (pi_f) that maximizes specific thrust or minimizes TSFC for a given bypass ratio and core technology.
+301,Shaft power and Residual thrust,Parameter,General,GeneralPhysics,涡桨循环,2,0.8,A real turboprop splits the available turbine energy into shaft power to drive the propeller and a small amount of jet thrust from the exhaust.
+302,Shaft power conversion to thrust,Parameter,General,GeneralPhysics,性能指标,2,0.8,The efficiency with which the propeller converts the brake shaft horsepower into effective aircraft propulsive power.
+303,Fuel flow divided by Equivalent thrust,Parameter,General,FluidDynamics,性能指标,2,0.8,"For turboprops, ESFC (or S_e) combines the propeller shaft power and residual jet thrust into a single performance parameter."
+304,Optimum nozzle pressure ratio,Component,Exhaust,FluidDynamics,性能优化,1,1.0,There is an optimum balance between how much expansion occurs in the turbine (for shaft power) versus the exhaust nozzle (for jet thrust) to maximize total equivalent thrust.
+305,Required turbine temperature drop,BoundaryCondition,Expansion,Thermodynamics,损失效应,4,0.5,"Extracting mechanical power from the shaft forces the turbine to work harder, which reduces the total enthalpy available for the exhaust jet."
+306,Predict performance of a fixed engine,Component,General,GeneralPhysics,性能预测,1,1.0,Engine performance analysis (or off-design analysis) predicts the performance of a specific engine across various flight conditions and throttle settings.
+307,Component flow areas,Parameter,General,FluidDynamics,运行约束,2,0.8,"For a built engine, the physical throat areas of turbines and nozzles are geometrically fixed, which locks the aerodynamic coupling."
+308,Mass flow scaled by dimensionless temperature and pressure,Parameter,General,FluidDynamics,相似准则,2,0.8,"Corrected mass flow rate m_dot_c is defined as m_dot * sqrt(theta) / delta, allowing data from different conditions to be collapsed onto a single curve."
+309,Physical rotational speed divided by square root of theta,Parameter,General,GeneralPhysics,相似准则,2,0.8,N_c = N / sqrt(theta). It relates the blade tip Mach number to the aerodynamic performance of turbomachinery.
+310,Continuity of mass and power balance,Equation,General,GeneralPhysics,整机匹配,3,0.6,"Steady-state off-design operation requires that the mass flow entering a component matches downstream constraints, and the turbine power balances the compressor power."
+311,Upstream compressor operating point,Component,Compression,GeneralPhysics,整机匹配,1,1.0,"If the high-pressure turbine nozzle guides are choked, the corrected mass flow exiting the compressor remains essentially constant, creating a fixed pumping constraint."
+312,Turbine flow capacity,Component,Expansion,FluidDynamics,整机匹配,1,1.0,The steady-state compressor operating line on a compressor map is determined by the fixed throat area of the downstream turbine and exhaust nozzle.
+313,Turbine pressure ratio,Component,Expansion,FluidDynamics,整机匹配,1,1.0,"When the convergent exhaust nozzle is choked, the operating pressure ratio across the turbine becomes independent of ambient pressure."
+314,Fuel flow rate and variable geometry,Parameter,General,FluidDynamics,发动机控制,2,0.8,The fuel control unit (FCU) adjusts the fuel flow to match pilot thrust demands while keeping the engine within safety limits.
+315,Maximum fan speed,Parameter,General,GeneralPhysics,发动机控制,2,0.8,Mechanical stress restricts the maximum physical or corrected rotational speed of the fan spool.
+316,Maximum compressor discharge pressure,Component,Compression,FluidDynamics,发动机控制,1,1.0,Structural casing design restricts the maximum compressor exit pressure (P_t3) to prevent burst failure.
+317,Maximum turbine inlet temperature,BoundaryCondition,Expansion,Thermodynamics,发动机控制,4,0.5,Material thermal properties restrict the maximum allowable gas temperature entering the turbine blades (T_t4).
+318,Control logic transition point,Parameter,General,Control,发动机控制,2,0.8,Theta_break represents the ambient temperature point where the engine control transitions from limiting maximum compressor pressure ratio to limiting maximum turbine inlet temperature.
+319,Maximum pressure or shaft speed,Parameter,General,FluidDynamics,发动机控制,2,0.8,"At low ambient temperatures (below theta_break), the engine is typically limited by mechanical limits like pressure or spool speed."
+320,Thrust versus TSFC,Parameter,General,GeneralPhysics,运行特性,2,0.8,A throttle hook is a curve showing the relationship between thrust and thrust specific fuel consumption at a constant flight condition as the throttle is varied.
+321,Temporary power imbalance,Equation,General,GeneralPhysics,过渡态,3,0.6,"During acceleration, the turbine power must exceed the compressor power to accelerate the spool rotor inertia, causing the operating line to transiently swing toward the stall line."
+322,Ideal Brayton cycle,Equation,Cycle,GeneralPhysics,CrossDomain,3,0.6,The realistic engine cycle analysis (Chapter 7) modifies the ideal Brayton cycle (Chapter 4) by incorporating polytropic efficiencies and pressure drops (Chapter 5).
+323,Nozzle throat area,Component,Exhaust,GeneralPhysics,CrossDomain,1,1.0,The physical throat area of the components designed in Chapters 4 and 7 acts as a geometric constraint that fixes the operating line in Chapter 8.
+324,Design point parameters,Parameter,General,GeneralPhysics,CrossDomain,2,0.8,Reference design choices (Chapters 4 & 7) define the fixed constants (like turbine area) needed for off-design performance evaluation (Chapter 8).
+325,Isentropic flow theory,Equation,General,FluidDynamics,CrossDomain,3,0.6,Isentropic area-Mach relations from Chapter 2 are directly utilized to design rocket nozzles in Chapter 3 and exhaust nozzles in Chapters 4 and 5.
+326,Normal shock wave,Parameter,General,GeneralPhysics,CrossDomain,2,0.8,The total pressure drop across a normal shock (Chapter 2) explains the reduction of inlet recovery pi_d in supersonic flight (Chapters 5 and 7).
+327,Choked flow condition,BoundaryCondition,General,FluidDynamics,CrossDomain,4,0.5,The throat choking criterion (Chapter 2) becomes the fundamental law regulating component mass flow matching in off-design operation (Chapter 8).
+328,Propellant mass flow,Parameter,General,FluidDynamics,CrossDomain,2,0.8,The design propellant mass flow derived from Chapter 3 specific impulse requirements must satisfy the pump-turbine shaft power matching in Chapter 6.
+329,Turbine material thermal limit,BoundaryCondition,Expansion,Materials,CrossDomain,4,0.5,The metallurgical temperature limit of turbine blades (Chapter 5) establishes the boundary for the hot-day Theta_break control logic (Chapter 8).
+330,Afterburner pressure drop,BoundaryCondition,Combustion,FluidDynamics,CrossDomain,4,0.5,The fundamental thermal pressure drop in afterburners (Chapter 5 Rayleigh effect) severely penalizes the real augmented TSFC calculated in Chapter 7.
+331,Off-design performance,Parameter,General,GeneralPhysics,CrossDomain,2,0.8,Reference design choices (Chapters 4 & 7) define the fixed constants (like turbine area) needed for off-design performance evaluation (Chapter 8).
+332,Real supersonic inlet,Component,General,GeneralPhysics,CrossDomain,1,1.0,The total pressure drop across a normal shock (Chapter 2) explains the reduction of inlet recovery pi_d in supersonic flight (Chapters 5 and 7).
+333,Maximum combustor heat addition,Component,Combustion,Thermodynamics,CrossDomain,1,1.0,"The foundational physics of Rayleigh flow and thermal choking (Chapter 2) constraint the maximum fuel injection in burners (Chapters 5, 7, and 8)."
+334,Mass flow alignment,Parameter,General,FluidDynamics,CrossDomain,2,0.8,The throat choking criterion (Chapter 2) becomes the fundamental law regulating component mass flow matching in off-design operation (Chapter 8).
+335,Nozzle efficiency and chemical kinetics,Component,Exhaust,GeneralPhysics,CrossDomain,1,1.0,The ideal rocket thrust relations (Chapter 3) are modified in Chapter 6 by implementing nozzle velocity coefficients and shifting/frozen chemical behaviors.
+336,Optimal engine bypass ratio,Parameter,General,GeneralPhysics,CrossDomain,2,0.8,The combustor and duct pressure losses detailed in Chapter 5 directly reduce the theoretical optimum bypass ratio when evaluated in Chapter 7 real cycles.
+337,Component temperature ratios,Parameter,General,Thermodynamics,CrossDomain,2,0.8,The stage-independent polytropic efficiencies defined in Chapter 5 are used as fundamental inputs for real cycle (Chapter 7) and off-design (Chapter 8) math models.
+338,Control logic shift to Theta_break,Equation,General,Control,CrossDomain,3,0.6,The metallurgical temperature limit of turbine blades (Chapter 5) establishes the boundary for the hot-day Theta_break control logic (Chapter 8).

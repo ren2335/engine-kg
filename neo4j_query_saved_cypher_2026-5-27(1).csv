@@ -1,0 +1,200 @@
+name,description,query,id,parentId,isFolder
+New Folder,,,0,,true
+1,,"MATCH (n)
+DETACH DELETE n;",1,0,false
+2,,"LOAD CSV WITH HEADERS FROM
+'https://raw.githubusercontent.com/ren2335/engine-kg/main/refer_restructured_mod.csv'
+AS row
+
+MERGE (a:Node {
+    name: row.源节点名称,
+    type: row.源节点标签
+})
+
+MERGE (b:Node {
+    name: row.目标节点名称,
+    type: row.目标节点标签
+})
+
+MERGE (a)-[:RELATION {
+    relation: row.关系类型
+}]->(b);",2,0,false
+3,,"MATCH (n)
+RETURN count(n);",3,0,false
+4,,"MATCH ()-[r]->()
+RETURN count(r);",4,0,false
+5,,"LOAD CSV WITH HEADERS FROM
+'https://raw.githubusercontent.com/ren2335/engine-kg/main/cross_restructured_mod.csv'
+AS row
+
+MERGE (a:Node {
+    name: row.源节点,
+    type: row.源标签
+})
+
+MERGE (b:Node {
+    name: row.目标节点,
+    type: row.目标标签
+})
+
+MERGE (a)-[:CROSS_RELATION {
+    relation: row.关系类型
+}]->(b);",5,0,false
+6,,"MATCH (n)-[r]-()
+RETURN n.name, count(r) AS degree
+ORDER BY degree DESC
+LIMIT 20;",6,0,false
+7,,"MATCH (n:Layer)
+DETACH DELETE n;",7,0,false
+8,,"CREATE (:Layer {name:""Component Layer""});
+CREATE (:Layer {name:""Parameter Layer""});
+CREATE (:Layer {name:""Equation Layer""});
+CREATE (:Layer {name:""BoundaryCondition Layer""});",8,0,false
+9,,"MATCH (n:Node)
+WHERE n.type = ""Component""
+
+MATCH (l:Layer {name:""Component Layer""})
+
+MERGE (n)-[:BELONGS_TO]->(l);",9,0,false
+10,,"MATCH (n:Node)
+WHERE n.type = ""Parameter""
+
+MATCH (l:Layer {name:""Parameter Layer""})
+
+MERGE (n)-[:BELONGS_TO]->(l);",10,0,false
+11,,"MATCH (n:Node)
+WHERE n.type = ""Equation""
+
+MATCH (l:Layer {name:""Equation Layer""})
+
+MERGE (n)-[:BELONGS_TO]->(l);",11,0,false
+12,,"MATCH (n:Node)
+WHERE n.type = ""BoundaryCondition""
+
+MATCH (l:Layer {name:""BoundaryCondition Layer""})
+
+MERGE (n)-[:BELONGS_TO]->(l);",12,0,false
+13,,"MATCH (c:Layer {name:""Component Layer""})
+MATCH (p:Layer {name:""Parameter Layer""})
+MATCH (e:Layer {name:""Equation Layer""})
+MATCH (b:Layer {name:""BoundaryCondition Layer""})
+
+MERGE (c)-[:DRIVES]->(p)
+MERGE (p)-[:USED_IN]->(e)
+MERGE (e)-[:LIMITED_BY]->(b);",13,0,false
+14,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Component""
+AND b.type = ""Parameter""
+
+AND (
+    toLower(a.name) CONTAINS ""compress""
+    OR toLower(a.name) CONTAINS ""turbine""
+    OR toLower(a.name) CONTAINS ""combust""
+)
+
+MERGE (a)-[:AFFECTS]->(b);",14,0,false
+15,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Parameter""
+AND b.type = ""Equation""
+
+MERGE (a)-[:USED_IN]->(b);",15,0,false
+16,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Equation""
+AND b.type = ""BoundaryCondition""
+
+MERGE (a)-[:LIMITED_BY]->(b);",16,0,false
+17,,"MATCH (n:Node)
+WHERE n.type = ""Component""
+SET n:Component;",17,0,false
+18,,"MATCH (n:Node)
+WHERE n.type = ""Parameter""
+SET n:Parameter;",18,0,false
+19,,"MATCH (n:Node)
+WHERE n.type = ""Equation""
+SET n:Equation;",19,0,false
+20,,"MATCH (n:Node)
+WHERE n.type = ""BoundaryCondition""
+SET n:BoundaryCondition;",20,0,false
+21,,"MATCH ()-[r:AFFECTS]->()
+DELETE r;",21,0,false
+22,,"MATCH ()-[r:USED_IN]->()
+DELETE r;",22,0,false
+23,,"MATCH ()-[r:LIMITED_BY]->()
+DELETE r;",23,0,false
+24,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Component""
+AND b.type = ""Parameter""
+
+AND toLower(a.name) CONTAINS ""compress""
+AND toLower(b.name) CONTAINS ""pressure""
+
+MERGE (a)-[:AFFECTS]->(b);",24,0,false
+25,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Component""
+AND b.type = ""Parameter""
+
+AND toLower(a.name) CONTAINS ""turbine""
+AND toLower(b.name) CONTAINS ""efficiency""
+
+MERGE (a)-[:AFFECTS]->(b);",25,0,false
+26,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Component""
+AND b.type = ""Parameter""
+
+AND (
+    toLower(a.name) CONTAINS ""combust""
+    OR toLower(a.name) CONTAINS ""burn""
+)
+
+AND toLower(b.name) CONTAINS ""temperature""
+
+MERGE (a)-[:AFFECTS]->(b);",26,0,false
+27,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Parameter""
+AND b.type = ""Equation""
+
+AND toLower(a.name) CONTAINS ""pressure""
+AND toLower(b.name) CONTAINS ""brayton""
+
+MERGE (a)-[:USED_IN]->(b);",27,0,false
+28,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Parameter""
+AND b.type = ""Equation""
+
+AND toLower(a.name) CONTAINS ""efficiency""
+AND toLower(b.name) CONTAINS ""efficiency""
+
+MERGE (a)-[:USED_IN]->(b);",28,0,false
+29,,"MATCH (a:Node),(b:Node)
+
+WHERE a.type = ""Equation""
+AND b.type = ""BoundaryCondition""
+
+AND toLower(a.name) CONTAINS ""temperature""
+
+MERGE (a)-[:LIMITED_BY]->(b);",29,0,false
+30,,"MATCH (n:Component)
+REMOVE n:Node;
+MATCH (n:Parameter)
+REMOVE n:Node;
+MATCH (n:Equation)
+REMOVE n:Node;
+MATCH (n:BoundaryCondition)
+REMOVE n:Node;",30,0,false
+31,,"MATCH (n)-[r]->(m)
+RETURN n,r,m
+LIMIT 300;",31,0,false
+32,,"MATCH (n)-[r]->(m)
+RETURN n,r,m",32,0,false
+33,,"MATCH (n)-[r*1..2]-(m)
+WHERE n.name CONTAINS ""compress""
+RETURN n,r,m
+LIMIT 80;",33,0,false
